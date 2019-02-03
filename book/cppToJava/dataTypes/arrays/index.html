@@ -18,11 +18,11 @@
     
     <link rel="icon" href="/website-base-loader/favicon.ico">
 </head>
-<body data-spy="scroll" data-target="#page-nav" data-offset="100">
+<body>
 <div id="app">
     <div id="content-wrapper">
   <div>
-    <navbar placement="top" type="inverse">
+    <navbar placement="top" type="inverse" class="temp-navbar">
       <a slot="brand" href="/" title="Home" class="navbar-brand">Software Engineering for Self-Directed Learners</a>
       <li slot="right">
         <searchbar :data="searchData" placeholder="Search" :on-hit="searchCallback" menu-align-right=""></searchbar>
@@ -92,7 +92,7 @@ System.out.println(scores.length) <span class="hljs-comment">// prints 4</span>
 scores[<span class="hljs-number">5</span>] = <span class="hljs-number">0</span>; <span class="hljs-comment">// causes an exception</span>
 </code></pre>
               <p><span class="fas fa-arrow-down"></span></p>
-              <pre class="hljs"><code>4
+              <pre><code class="hljs">4
 Exception in thread &quot;main&quot; java.lang.ArrayIndexOutOfBoundsException: 5
 	at Main.main(Main.java:6)
 </code></pre>
@@ -151,12 +151,12 @@ System.out.println(names[<span class="hljs-number">0</span>][<span class="hljs-n
 </code></pre>
                           <p>
                             <smal><span class="badge badge-secondary">&gt;_</span></smal> <code>java WordComparator adam eve</code> <span class="fas fa-arrow-down"></span></p>
-                          <pre class="hljs"><code>Words given: adam, eve
+                          <pre><code class="hljs">Words given: adam, eve
 They are the same: false
 </code></pre>
                           <p>
                             <smal><span class="badge badge-secondary">&gt;_</span></smal> <code>java WordComparator eve eve</code> <span class="fas fa-arrow-down"></span></p>
-                          <pre class="hljs"><code>Words given: eve, eve
+                          <pre><code class="hljs">Words given: eve, eve
 They are the same: true
 </code></pre>
                           <p>💡 Use the following technique to compare two <code>Strings</code>(i.e., don't use <code>==</code>). <span class="dimmed">Reason: to be covered in a later topic</span>.</p>
@@ -198,13 +198,8 @@ isSame = x.equals(<span class="hljs-string">"foo"</span>) <span class="hljs-comm
 <div id="flex-div"></div>
 <footer>
   <div class="text-center">
-    <small>This site was built with <a href="https://markbind.github.io/markbind/">MarkBind 1.17.0</a> at Sat, 26 Jan 2019 04:23:19 GMT</small></div>
+    <small>This site was built with <a href="https://markbind.github.io/markbind/">MarkBind 1.17.1</a> at Sun, 03 Feb 2019 07:12:34 GMT</small></div>
 </footer>
-</div>
-<div id="loading-overlay">
-    <div id="spinner-layout">
-        <div id="spinner"></div>
-    </div>
 </div>
 </body>
 <script src="../../../../markbind/js/vue.min.js"></script>
@@ -214,7 +209,6 @@ isSame = x.equals(<span class="hljs-string">"foo"</span>) <span class="hljs-comm
 <script src="../../../../markbind/js/bootstrap-vue.min.js"></script>
 <script>
     const baseUrl = '/website-base-loader'
-    const enableSearch = true
 </script>
 <script src="../../../../markbind/js/setup.js"></script>
 <script src="../../../../markbind/layouts/default/scripts.js"></script>

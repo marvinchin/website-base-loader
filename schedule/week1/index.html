@@ -18,11 +18,11 @@
     
     <link rel="icon" href="/website-base-loader/favicon.ico">
 </head>
-<body data-spy="scroll" data-target="#page-nav" data-offset="100">
+<body>
 <div id="app">
     <div id="content-wrapper">
   <div>
-    <navbar placement="top" type="inverse">
+    <navbar placement="top" type="inverse" class="temp-navbar">
       <a slot="brand" href="/website-base-loader/index.html" title="Home" class="navbar-brand">CS2103/T <small>Jan '19</small></a>
       <dropdown text="Schedule" class="nav-link">
         <li><a href="/website-base-loader/schedule/week1/index.html" class="dropdown-item"> <span><strong>Week 1</strong> [Jan 14]  <span class="fas fa-arrow-circle-left"></span></span></a></li>
@@ -1345,11 +1345,6 @@ What kind of questions are suitable to discuss with the tutor? Consider these tw
   </div>
 </div>
 </div>
-<div id="loading-overlay">
-    <div id="spinner-layout">
-        <div id="spinner"></div>
-    </div>
-</div>
 </body>
 <script src="../../markbind/js/vue.min.js"></script>
 <script src="../../markbind/js/vue-strap.min.js"></script>
@@ -1358,7 +1353,6 @@ What kind of questions are suitable to discuss with the tutor? Consider these tw
 <script src="../../markbind/js/bootstrap-vue.min.js"></script>
 <script>
     const baseUrl = '/website-base-loader'
-    const enableSearch = true
 </script>
 <script src="../../markbind/js/setup.js"></script>
 <script src="../../markbind/layouts/default/scripts.js"></script>

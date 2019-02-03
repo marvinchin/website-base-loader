@@ -26,11 +26,11 @@
     <link rel="stylesheet" href="/website-base-loader/css/schedule.css">
     <link rel="icon" href="/website-base-loader/favicon.ico">
 </head>
-<body data-spy="scroll" data-target="#page-nav" data-offset="100">
+<body>
 <div id="app">
     <div id="content-wrapper">
   <div>
-    <navbar placement="top" type="inverse">
+    <navbar placement="top" type="inverse" class="temp-navbar">
       <a slot="brand" href="/website-base-loader/index.html" title="Home" class="navbar-brand">CS2103/T <small>Jan '19</small></a>
       <dropdown text="Schedule" class="nav-link">
         <li><a href="/website-base-loader/schedule/week1/index.html" class="dropdown-item"> <span><strong>Week 1</strong> [Jan 14]  <span class="fas fa-arrow-circle-left"></span></span></a></li>
@@ -256,10 +256,10 @@
                         </tab>
                         <tab header="CLI">
                           <div>
-                            <pre class="hljs"><code>git status
+                            <pre><code class="hljs">git status
 </code></pre>
                             <p><span class="fas fa-arrow-down"></span></p>
-                            <pre class="hljs"><code>on branch master
+                            <pre><code class="hljs">on branch master
 </code></pre>
                           </div>
                           <hr>
@@ -281,11 +281,11 @@
                         <tab header="CLI">
                           <div>
                             <p>You can use the <code>branch</code> command to create a new branch and the <code>checkout</code> command to switch to a specific branch.</p>
-                            <pre class="hljs"><code>git branch feature1
+                            <pre><code class="hljs">git branch feature1
 git checkout feature1
 </code></pre>
                             <p>One-step shortcut to create a branch and switch to it at the same time:</p>
-                            <pre class="hljs"><code>git checkout –b feature1
+                            <pre><code class="hljs">git checkout –b feature1
 </code></pre>
                           </div>
                           <hr>
@@ -304,7 +304,7 @@ git checkout feature1
                         </tab>
                         <tab header="CLI">
                           <div>
-                            <pre class="hljs"><code>git checkout master
+                            <pre><code class="hljs">git checkout master
 </code></pre>
                           </div>
                           <hr>
@@ -326,7 +326,7 @@ git checkout feature1
                         </tab>
                         <tab header="CLI">
                           <div>
-                            <pre class="hljs"><code>git merge master
+                            <pre><code class="hljs">git merge master
 </code></pre>
                           </div>
                           <hr>
@@ -344,7 +344,7 @@ git checkout feature1
                           <hr>
                         </tab>
                         <tab header="CLI">
-                          <pre class="hljs"><code>git merge feature1
+                          <pre><code class="hljs">git merge feature1
 </code></pre>
                           <hr>
                         </tab>
@@ -374,7 +374,7 @@ git checkout feature1
                         <tab header="CLI">
                           <div>
                             <p>Use the <code>--no-ff</code> switch (short for <em>no fast forward</em>):</p>
-                            <pre class="hljs"><code>git merge --no-ff add-countries
+                            <pre><code class="hljs">git merge --no-ff add-countries
 </code></pre>
                           </div>
                           <hr>
@@ -423,7 +423,7 @@ This repo can be used to practice creating PRs.
                           <hr>
                         </tab>
                         <tab header="CLI">
-                          <pre class="hljs"><code>git push origin add-intro
+                          <pre><code class="hljs">git push origin add-intro
 </code></pre>
                           <hr>
                         </tab>
@@ -3042,7 +3042,7 @@ This repo can be used to practice creating PRs.
                     <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> Classes for CityConnect app">
                       <question has-input="true">
                         <p>Assume you are writing a CLI program called <strong><code>CityConnect</code></strong> for storing and querying distances between cities. The behavior is as follows:</p>
-                        <pre class="hljs"><code>Welcome to CityConnect!
+                        <pre><code class="hljs">Welcome to CityConnect!
 
 Enter command: addroute Clementi BuonaVista 12
 Route from Clementi to BuonaVista with distance 12km added
@@ -3320,7 +3320,7 @@ System.out.println(t.secondsSinceMidnight() + <span class="hljs-string">" second
 }
 </code></pre>
                         <p><span class="fas fa-arrow-down"></span></p>
-                        <pre class="hljs"><code>0
+                        <pre><code class="hljs">0
 78
 </code></pre>
                         <div slot="hint">
@@ -3461,7 +3461,7 @@ System.out.println(t.secondsSinceMidnight() + <span class="hljs-string">" second
 }
 </code></pre>
                         <p><span class="fas fa-arrow-down"></span></p>
-                        <pre class="hljs"><code>x      : 4
+                        <pre><code class="hljs">x      : 4
 y      : 5
 radius : 6.0
 area   : 113
@@ -3729,7 +3729,7 @@ radius : 0.0
 }
 </code></pre>
                         <p><span class="fas fa-arrow-down"></span></p>
-                        <pre class="hljs"><code>max radius used so far : 0.0
+                        <pre><code class="hljs">max radius used so far : 0.0
 max radius used so far : 10.0
 max radius used so far : 10.0
 max radius used so far : 12.0
@@ -3858,7 +3858,7 @@ Day[] holidays = <span class="hljs-keyword">new</span> Day[]{Day.SATURDAY, Day.S
 }
 </code></pre>
                         <p><span class="fas fa-arrow-down"></span></p>
-                        <pre class="hljs"><code>Red indicates high priority
+                        <pre><code class="hljs">Red indicates high priority
 Orange indicates medium priority
 Blue indicates medium priority
 Green indicates low priority
@@ -4302,7 +4302,7 @@ Green indicates low priority
 }
 </code></pre>
                 <p><span class="fas fa-arrow-down"></span></p>
-                <pre class="hljs"><code>Printed in Superclass.
+                <pre><code class="hljs">Printed in Superclass.
 Printed in Subclass
 </code></pre>
                 <p>Within <code>Subclass</code>, the simple name <code>printMethod()</code> refers to the one declared in <code>Subclass</code>, which overrides the one in <code>Superclass</code>. So, to refer to <code>printMethod()</code> inherited from
@@ -4411,7 +4411,7 @@ Printed in Subclass
 }
 </code></pre>
                         <p><span class="fas fa-arrow-down"></span></p>
-                        <pre class="hljs"><code>Read a good book
+                        <pre><code class="hljs">Read a good book
 false
 true
 Read textbook
@@ -4826,7 +4826,7 @@ Postponed to Nov 18th
 }
 </code></pre>
                         <p><span class="fas fa-arrow-down"></span></p>
-                        <pre class="hljs"><code>3x4=12
+                        <pre><code class="hljs">3x4=12
 5x5=25
 </code></pre>
                         <ol>
@@ -4862,7 +4862,7 @@ Postponed to Nov 18th
 }
 </code></pre>
                         <p><span class="fas fa-arrow-down"></span></p>
-                        <pre class="hljs"><code>3x4=12
+                        <pre><code class="hljs">3x4=12
 WIDTH or HEIGHT is not a number: 3xy
 WIDTH or HEIGHT is missing: 3x
 WIDTH or HEIGHT is missing: 3
@@ -6225,7 +6225,7 @@ Collections.sort(persons, <span class="hljs-keyword">new</span> Comparator&lt;Cu
                   <ul>
                     <li>
                       <p>Mark your code with a <code>//@@author {yourGithubUsername}</code>. Note the double <code>@</code>.<br> The <code>//@@author</code> tag should indicates the beginning of the code you wrote. The code up to the next <code>//@@author</code>                        tag or the end of the file (whichever comes first) will be considered as was written by that author. Here is a sample code file:</p>
-                      <pre class="hljs"><code>//@@author johndoe
+                      <pre><code class="hljs">//@@author johndoe
 method 1 ...
 method 2 ...
 //@@author sarahkhoo
@@ -6237,7 +6237,7 @@ method 4 ...
                     <li>
                       <p><strong>If you don't know who wrote the code segment below yours</strong>, you may put an empty <code>//@@author</code> (i.e. no GitHub username) to indicate the end of the code segment you wrote. The author of code below yours can
                         add the GitHub username to the empty tag later. Here is a sample code with an empty <code>author</code> tag:</p>
-                      <pre class="hljs"><code>method 0 ...
+                      <pre><code class="hljs">method 0 ...
 //@@author johndoe
 method 1 ...
 method 2 ...
@@ -6248,7 +6248,7 @@ method 4 ...
                     </li>
                     <li>
                       <p><strong>The author tag syntax varies based on file type</strong> e.g. for java, css, fxml. Use the corresponding comment syntax for non-Java files.<br> Here is an example code from an xml/fxml file.</p>
-                      <pre class="hljs"><code>&lt;!-- @@author sereneWong --&gt;
+                      <pre><code class="hljs">&lt;!-- @@author sereneWong --&gt;
 &lt;textbox&gt;
   &lt;label&gt;...&lt;/label&gt;
   &lt;input&gt;...&lt;/input&gt;
@@ -6259,13 +6259,13 @@ method 4 ...
                     <li>
                       <p><strong>Do not put the <code>//@@author</code> inside java header comments</strong>.<br> 👎
                         <span class="fas fa-arrow-down"></span></p>
-                      <pre class="hljs"><code>/**
+                      <pre><code class="hljs">/**
   * Returns true if ...
   * @@author johndoe
   */
 </code></pre>
                       <p>👍<span class="fas fa-arrow-down"></span></p>
-                      <pre class="hljs"><code>//@@author johndoe
+                      <pre><code class="hljs">//@@author johndoe
 /**
   * Returns true if ...
   */
@@ -6299,7 +6299,7 @@ method 4 ...
                         <li>use <code>//@@author {yourGithubUsername}-unused</code> to mark unused code in those files (note the suffix <code>unused</code>) e.g.
                         </li>
                       </ul>
-                      <pre class="hljs"><code>//@@author johndoe-unused
+                      <pre><code class="hljs">//@@author johndoe-unused
 method 1 ...
 method 2 ...
 </code></pre>
@@ -6308,7 +6308,7 @@ method 2 ...
                     <li>
                       <p><strong>If you reused code from elsewhere,</strong> mark such code as <code>//@@author {yourGithubUsername}-reused</code> (note the suffix <code>reused</code>) e.g.
                       </p>
-                      <pre class="hljs"><code>//@@author johndoe-reused
+                      <pre><code class="hljs">//@@author johndoe-reused
 method 1 ...
 method 2 ...
 </code></pre>
@@ -6593,13 +6593,8 @@ method 2 ...
 <div id="flex-div"></div>
 <footer>
   <div class="text-center">
-    <small>This site was built with <a href="https://markbind.github.io/markbind/">MarkBind 1.17.0</a> at Sat, 26 Jan 2019 04:23:19 GMT</small></div>
+    <small>This site was built with <a href="https://markbind.github.io/markbind/">MarkBind 1.17.1</a> at Sun, 03 Feb 2019 07:12:34 GMT</small></div>
 </footer>
-</div>
-<div id="loading-overlay">
-    <div id="spinner-layout">
-        <div id="spinner"></div>
-    </div>
 </div>
 </body>
 <script src="../../markbind/js/vue.min.js"></script>
@@ -6609,7 +6604,6 @@ method 2 ...
 <script src="../../markbind/js/bootstrap-vue.min.js"></script>
 <script>
     const baseUrl = '/website-base-loader'
-    const enableSearch = true
 </script>
 <script src="../../markbind/js/setup.js"></script>
 <script src="../../markbind/layouts/default/scripts.js"></script>

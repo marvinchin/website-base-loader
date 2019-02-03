@@ -18,7 +18,7 @@
     
     <link rel="icon" href="/website-base-loader/favicon.ico">
 </head>
-<body data-spy="scroll" data-target="#page-nav" data-offset="100">
+<body>
 <div id="app">
     <div id="content-wrapper">
   <link rel="stylesheet" href="/website-base-loader/book/css/textbook.css">
@@ -7504,7 +7504,7 @@ String name = logic.getName(<span class="hljs-number">23</span>);
             beyond its limits.</p>
           <tip-box>
             <p><span class="fas fa-cube"></span> Suppose the SUT is a browser supposedly capable of handling web pages containing up to 5000 characters. Given below is a test case to test if the SUT fails gracefully if pushed beyond its limits.</p>
-            <pre class="hljs"><code>Test case: load a web page that is too big
+            <pre><code class="hljs">Test case: load a web page that is too big
 * Input: load a web page containing more than 5000 characters. 
 * Expected behavior: abort the loading of the page and show a meaningful error message. 
 </code></pre>
@@ -7843,7 +7843,7 @@ String name = logic.getName(<span class="hljs-number">23</span>);
             <li>
               <p>Store the test input in the text file <code>input.txt</code>.</p>
               <panel header="%%<span class='fas fa-cube'></span> Example `input.txt`%%" type="seamless">
-                <pre class="hljs"><code>add Valid Name p/12345 valid@email.butNoPrefix
+                <pre><code class="hljs">add Valid Name p/12345 valid@email.butNoPrefix
 add Valid Name 12345 e/valid@email.butPhonePrefixMissing
 </code></pre>
               </panel>
@@ -7851,7 +7851,7 @@ add Valid Name 12345 e/valid@email.butPhonePrefixMissing
             <li>
               <p>Store the output we expect from the SUT in another text file <code>expected.txt</code>.</p>
               <panel header="%%<span class='fas fa-cube'></span> Example `expected.txt`%%" type="seamless">
-                <pre class="hljs"><code>Command: || [add Valid Name p/12345 valid@email.butNoPrefix]
+                <pre><code class="hljs">Command: || [add Valid Name p/12345 valid@email.butNoPrefix]
 Invalid command format: add 
 
 Command: || [add Valid Name 12345 e/valid@email.butPhonePrefixMissing]
@@ -7893,7 +7893,7 @@ Invalid command format: add
             </li>
             <li>
               <p>Next, we compare <code>output.txt</code> with the <code>expected.txt</code>. This can be done using a utility such as Windows <code>FC</code> (i.e. File Compare) command, Unix <code>diff</code> command, or a GUI tool such as <em>WinMerge</em>.</p>
-              <pre class="hljs"><code>FC output.txt expected.txt
+              <pre><code class="hljs">FC output.txt expected.txt
 </code></pre>
             </li>
           </ol>
@@ -11992,18 +11992,18 @@ AcademicStaff academicStaff = staff; <span class="hljs-comment">// Not OK</span>
                 <p></p>
                 <p>Navigate to the <code>things</code> directory.</p>
                 <p>Use the command <code>git init</code> which should initialize the repo.</p>
-                <pre class="hljs"><code>$ git init
+                <pre><code class="hljs">$ git init
 Initialized empty Git repository in c:/repos/things/.git/
 </code></pre>
                 <p>You can use the command <code>ls -a</code> to view all files, which should show the <code>.git</code> directory that was created by the previous command.</p>
-                <pre class="hljs"><code>$ ls -a
+                <pre><code class="hljs">$ ls -a
 .  ..  .git
 </code></pre>
                 <p>You can also use the <code>git status</code> command to check the status of the newly-created repo. It should respond with something like the bellow</p>
-                <pre class="hljs"><code>git status
+                <pre><code class="hljs">git status
 </code></pre>
                 <p><span class="fas fa-arrow-down"></span></p>
-                <pre class="hljs"><code># On branch master
+                <pre><code class="hljs"># On branch master
 #
 # Initial commit
 #
@@ -12123,7 +12123,7 @@ git status
                 <pre><code class="hljs sh">git <span class="hljs-built_in">log</span>
 </code></pre>
                 <p><span class="fas fa-arrow-down"></span></p>
-                <pre class="hljs"><code>commit 8fd30a6910efb28bb258cd01be93e481caeab846
+                <pre><code class="hljs">commit 8fd30a6910efb28bb258cd01be93e481caeab846
 Author: … &lt; … @... &gt;
 Date:   Wed Jul 5 16:06:28 2017 +0800
 
@@ -12157,7 +12157,7 @@ Date:   Wed Jul 5 16:06:28 2017 +0800
               <div>
                 <p>The file should be currently listed under <code>Unstaged files</code>. Right-click it and choose <code>Ignore…</code>. Choose <code>Ignore exact filename(s)</code> and click <code>OK</code>.</p>
                 <p>Observe that a file named <code>.gitignore</code> has been created in the working directory root and has the following line in it.</p>
-                <pre class="hljs"><code>temp.txt
+                <pre><code class="hljs">temp.txt
 </code></pre>
               </div>
               <hr>
@@ -12165,7 +12165,7 @@ Date:   Wed Jul 5 16:06:28 2017 +0800
             <tab header="CLI">
               <div>
                 <p>Create a file named <code>.gitignore</code> in the working directory root and add the following line in it.</p>
-                <pre class="hljs"><code>temp.txt
+                <pre><code class="hljs">temp.txt
 </code></pre>
               </div>
               <hr>
@@ -12203,10 +12203,10 @@ Date:   Wed Jul 5 16:06:28 2017 +0800
             <tab header="CLI">
               <div>
                 <p>To add a tag to the current commit as <code>v1.0</code>,</p>
-                <pre class="hljs"><code>git tag –a v1.0
+                <pre><code class="hljs">git tag –a v1.0
 </code></pre>
                 <p>To view tags</p>
-                <pre class="hljs"><code>git tag
+                <pre><code class="hljs">git tag
 </code></pre>
                 <p>To learn how to add a tag to a past commit, go to the <a href="https://git-scm.com/book/en/v2/Git-Basics-Tagging">‘Git Basics – Tagging’ page of the git-scm book</a> and refer the ‘Tagging Later’ section.</p>
               </div>
@@ -12238,7 +12238,7 @@ Date:   Wed Jul 5 16:06:28 2017 +0800
                 <pre><code class="hljs sh">git show &lt; part-of-commit-hash &gt;
 </code></pre>
                 <p>Example:</p>
-                <pre class="hljs"><code>git show 251b4cf
+                <pre><code class="hljs">git show 251b4cf
 </code></pre>
                 <p><span class="fas fa-arrow-down"></span></p>
                 <pre><code class="hljs diff">commit 5bc0e30635a754908dbdd3d2d833756cc4b52ef3
@@ -12471,7 +12471,7 @@ index 15b57f7..17f4528 100644
             <tab header="CLI">
               <div>
                 <p>Use the <code>reset</code> command to delete commits at the tip of the revision history.</p>
-                <pre class="hljs"><code>git reset --hard HEAD~2
+                <pre><code class="hljs">git reset --hard HEAD~2
 </code></pre>
               </div>
               <hr>
@@ -12611,10 +12611,10 @@ index 15b57f7..17f4528 100644
             </tab>
             <tab header="CLI">
               <div>
-                <pre class="hljs"><code>git status
+                <pre><code class="hljs">git status
 </code></pre>
                 <p><span class="fas fa-arrow-down"></span></p>
-                <pre class="hljs"><code>on branch master
+                <pre><code class="hljs">on branch master
 </code></pre>
               </div>
               <hr>
@@ -12636,11 +12636,11 @@ index 15b57f7..17f4528 100644
             <tab header="CLI">
               <div>
                 <p>You can use the <code>branch</code> command to create a new branch and the <code>checkout</code> command to switch to a specific branch.</p>
-                <pre class="hljs"><code>git branch feature1
+                <pre><code class="hljs">git branch feature1
 git checkout feature1
 </code></pre>
                 <p>One-step shortcut to create a branch and switch to it at the same time:</p>
-                <pre class="hljs"><code>git checkout –b feature1
+                <pre><code class="hljs">git checkout –b feature1
 </code></pre>
               </div>
               <hr>
@@ -12659,7 +12659,7 @@ git checkout feature1
             </tab>
             <tab header="CLI">
               <div>
-                <pre class="hljs"><code>git checkout master
+                <pre><code class="hljs">git checkout master
 </code></pre>
               </div>
               <hr>
@@ -12681,7 +12681,7 @@ git checkout feature1
             </tab>
             <tab header="CLI">
               <div>
-                <pre class="hljs"><code>git merge master
+                <pre><code class="hljs">git merge master
 </code></pre>
               </div>
               <hr>
@@ -12699,7 +12699,7 @@ git checkout feature1
               <hr>
             </tab>
             <tab header="CLI">
-              <pre class="hljs"><code>git merge feature1
+              <pre><code class="hljs">git merge feature1
 </code></pre>
               <hr>
             </tab>
@@ -12729,7 +12729,7 @@ git checkout feature1
             <tab header="CLI">
               <div>
                 <p>Use the <code>--no-ff</code> switch (short for <em>no fast forward</em>):</p>
-                <pre class="hljs"><code>git merge --no-ff add-countries
+                <pre><code class="hljs">git merge --no-ff add-countries
 </code></pre>
               </div>
               <hr>
@@ -12750,7 +12750,7 @@ git checkout feature1
           <img src="/website-base-loader/book/gitAndGithub/mergeConflicts/images/sourcetree_1.png" height="350">
           <p></p>
           <p><strong>3. Try to merge the <code>fix1</code> branch onto the <code>master</code> branch.</strong> Git will pause mid-way during the merge and report a merge conflict. If you open the conflicted file, you will see something like this:</p>
-          <pre class="hljs"><code>COLORS
+          <pre><code class="hljs">COLORS
 ------
 blue
 &lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
@@ -12764,21 +12764,21 @@ white
           <p><strong>4. Observe how the conflicted part is marked</strong> between a line starting with <code>&lt;&lt;&lt;&lt;&lt;&lt;&lt;</code> and a line starting with <code>&gt;&gt;&gt;&gt;&gt;&gt;&gt;</code>, separated by another line starting with
             <code>=======</code>.</p>
           <p>This is the conflicting part that is coming from the <code>master</code> branch:</p>
-          <pre class="hljs"><code>
+          <pre><code class="hljs">
 &lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
 black
 =======
 
 </code></pre>
           <p>This is the conflicting part that is coming from the <code>fix1</code> branch:</p>
-          <pre class="hljs"><code>
+          <pre><code class="hljs">
 =======
 green
 &gt;&gt;&gt;&gt;&gt;&gt;&gt; fix1
 
 </code></pre>
           <p><strong>5. Resolve the conflict by editing the file</strong>. Let us assume you want to keep both lines in the merged version. You can modify the file to be like this:</p>
-          <pre class="hljs"><code>COLORS
+          <pre><code class="hljs">COLORS
 ------
 blue
 black
@@ -12813,7 +12813,7 @@ This repo can be used to practice creating PRs.
               <hr>
             </tab>
             <tab header="CLI">
-              <pre class="hljs"><code>git push origin add-intro
+              <pre><code class="hljs">git push origin add-intro
 </code></pre>
               <hr>
             </tab>
@@ -12890,7 +12890,7 @@ This repo can be used to practice creating PRs.
                     <hr>
                   </tab>
                   <tab header="CLI">
-                    <pre class="hljs"><code>git push origin add-intro
+                    <pre><code class="hljs">git push origin add-intro
 </code></pre>
                     <hr>
                   </tab>
@@ -12958,7 +12958,7 @@ This repo can be used to practice creating PRs.
           <p></p>
           <p><strong>4. Sync the local repo with the remote repo.</strong> Because of the merge you did on the GitHub, the <code>master</code> branch of your fork is now ahead of your local repo by one commit. To sync the local repo with the remote repo,
             pull the <code>master</code> branch to the local repo.</p>
-          <pre class="hljs"><code>git checkout master
+          <pre><code class="hljs">git checkout master
 git pull origin master
 </code></pre>
           <p>Observe how the <code>add-intro</code> branch is now merged to the <code>master</code> branch in your local repo as well.</p>
@@ -13399,7 +13399,7 @@ git pull origin master
               <p></p>
               <h2 id="possible-issues">Possible Issues<a class="fa fa-anchor" href="#possible-issues"></a></h2>
               <p>If JavaFx fails to load <code>PersonOverview.fxml</code>, you might get the following error message:</p>
-              <pre class="hljs"><code>javafx.fxml.LoadException:
+              <pre><code class="hljs">javafx.fxml.LoadException:
 /.../AddressApp/out/production/AddressApp/seedu/address/view/PersonOverview.fxml:15
 </code></pre>
               <p>To solve this issue, open <code>PersonOverview.fxml</code> normally in IntelliJ and ensure that there is no such attribute around:</p>
@@ -13737,7 +13737,7 @@ git pull origin master
               </ol>
               <h2 id="opening-up-the-person-overview-controller-to-java-fx">Opening up the <code>PersonOverviewController</code> to JavaFx<a class="fa fa-anchor" href="#opening-up-the-person-overview-controller-to-java-fx"></a></h2>
               <p>If you try and run the application now, you will encounter the following error:</p>
-              <pre class="hljs"><code>javafx.fxml.LoadException: ...
+              <pre><code class="hljs">javafx.fxml.LoadException: ...
 
 ...
 
@@ -13913,13 +13913,8 @@ Caused by: java.lang.IllegalAccessException: class javafx.fxml.FXMLLoader$ValueE
 <div id="flex-div"></div>
 <footer>
   <div class="text-center">
-    <small>This site was built with <a href="https://markbind.github.io/markbind/">MarkBind 1.17.0</a> at Sat, 26 Jan 2019 04:23:19 GMT</small></div>
+    <small>This site was built with <a href="https://markbind.github.io/markbind/">MarkBind 1.17.1</a> at Sun, 03 Feb 2019 07:12:34 GMT</small></div>
 </footer>
-</div>
-<div id="loading-overlay">
-    <div id="spinner-layout">
-        <div id="spinner"></div>
-    </div>
 </div>
 </body>
 <script src="../markbind/js/vue.min.js"></script>
@@ -13929,7 +13924,6 @@ Caused by: java.lang.IllegalAccessException: class javafx.fxml.FXMLLoader$ValueE
 <script src="../markbind/js/bootstrap-vue.min.js"></script>
 <script>
     const baseUrl = '/website-base-loader'
-    const enableSearch = true
 </script>
 <script src="../markbind/js/setup.js"></script>
 <script src="../markbind/layouts/default/scripts.js"></script>

@@ -18,11 +18,11 @@
     
     <link rel="icon" href="/website-base-loader/favicon.ico">
 </head>
-<body data-spy="scroll" data-target="#page-nav" data-offset="100">
+<body>
 <div id="app">
     <div id="content-wrapper">
   <div>
-    <navbar placement="top" type="inverse">
+    <navbar placement="top" type="inverse" class="temp-navbar">
       <a slot="brand" href="/" title="Home" class="navbar-brand">Software Engineering for Self-Directed Learners</a>
       <li slot="right">
         <searchbar :data="searchData" placeholder="Search" :on-hit="searchCallback" menu-align-right=""></searchbar>
@@ -109,7 +109,7 @@ System.out.println(name);
 System.out.println(upperName);
 </code></pre>
                 <p><span class="fas fa-arrow-down"></span></p>
-                <pre class="hljs"><code>Alan Turing
+                <pre><code class="hljs">Alan Turing
 ALAN TURING
 </code></pre>
               </box>
@@ -131,7 +131,7 @@ text = text.replace(<span class="hljs-string">"Computer Science"</span>, <span c
 System.out.println(text);
 </code></pre>
                 <p><span class="fas fa-arrow-down"></span></p>
-                <pre class="hljs"><code>CS is fun!
+                <pre><code class="hljs">CS is fun!
 </code></pre>
               </box>
             </div>
@@ -263,7 +263,7 @@ System.out.println(s1.equalsIgnoreCase(s2)); <span class="hljs-comment">//true</
                 <pre><code class="hljs java">System.out.println(<span class="hljs-string">"First line\nSecond \"line\""</span>);
 </code></pre>
                 <p><span class="fas fa-arrow-down"></span></p>
-                <pre class="hljs"><code>First line
+                <pre><code class="hljs">First line
 Second &quot;line&quot;
 </code></pre>
               </box>
@@ -273,7 +273,7 @@ Second &quot;line&quot;
                 <pre><code class="hljs java">System.out.println(<span class="hljs-string">"First line"</span> + System.lineSeparator() + <span class="hljs-string">"Second line"</span>);
 </code></pre>
                 <p><span class="fas fa-arrow-down"></span></p>
-                <pre class="hljs"><code>First line
+                <pre><code class="hljs">First line
 Second line
 </code></pre>
               </box>
@@ -340,7 +340,7 @@ Second line
 }
 </code></pre>
                         <p><span class="fas fa-arrow-down"></span></p>
-                        <pre class="hljs"><code>SANDWICH: 4.50
+                        <pre><code class="hljs">SANDWICH: 4.50
 SODA: 10.00
 FRIES: 0.50
 </code></pre>
@@ -397,7 +397,7 @@ System.out.println(d);
 System.out.println(i);
 </code></pre>
             <p><span class="fas fa-arrow-down"></span></p>
-            <pre class="hljs"><code>2.5
+            <pre><code class="hljs">2.5
 2
 </code></pre>
           </box>
@@ -440,7 +440,7 @@ System.out.println(i);
 }
 </code></pre>
                       <p><span class="fas fa-arrow-down"></span></p>
-                      <pre class="hljs"><code>0
+                      <pre><code class="hljs">0
 109
 </code></pre>
                       <div slot="hint">
@@ -493,7 +493,7 @@ System.out.println(Arrays.toString(b));
 System.out.println(Arrays.toString(c));
 </code></pre>
           <p><span class="fas fa-arrow-down"></span></p>
-          <pre class="hljs"><code>[1, 2, 3]
+          <pre><code class="hljs">[1, 2, 3]
 [1, 2, 3, 4]
 </code></pre>
         </box>
@@ -540,7 +540,7 @@ System.out.println(Arrays.toString(c));
 }
 </code></pre>
                     <p><span class="fas fa-arrow-down"></span></p>
-                    <pre class="hljs"><code>[]
+                    <pre><code class="hljs">[]
 []
 [adam@example.com, john@example.com, some@]
 [@bee.com]
@@ -653,17 +653,17 @@ System.out.printf(<span class="hljs-string">"Hello %s, age %d\n"</span>, name, a
                     <li>The user can describe expenses is in free form text, as one line. The program takes all amounts mentioned in the format <code>$amount</code> e.g., <code>$1.50</code></li>
                   </ul>
                   <p>Here is one example output: <span class="fas fa-arrow-down"></span></p>
-                  <pre class="hljs"><code>Your expenses while overseas?beer $4.50 books $3.00 $5.00 for food, that's all
+                  <pre><code class="hljs">Your expenses while overseas?beer $4.50 books $3.00 $5.00 for food, that's all
 Expenses in overseas currency:[$4.50, $3.00, $5.00]
 Total in local currency: $21.25
 </code></pre>
                   <p>Here is another: <span class="fas fa-arrow-down"></span></p>
-                  <pre class="hljs"><code>Your expenses while overseas?nothing. I lived off my friends all the time.
+                  <pre><code class="hljs">Your expenses while overseas?nothing. I lived off my friends all the time.
 Expenses in overseas currency:[]
 Total in local currency: $0.00
 </code></pre>
                   <p>One more: <span class="fas fa-arrow-down"></span></p>
-                  <pre class="hljs"><code>Your expenses while overseas? Just $10
+                  <pre><code class="hljs">Your expenses while overseas? Just $10
 Expenses in overseas currency:[$10]
 Total in local currency: $17.00
 </code></pre>
@@ -737,7 +737,7 @@ System.out.println(Arrays.toString(words));
                   <div id="main">
                     <p>In this first version of the TaskManager, the task list is not saved to the disk <span class="dimmed">i.e., the task list does not persist between multiple runs of the program</span></p>
                     <p>Here is an example output: <span class="fas fa-arrow-down"></span></p>
-                    <pre class="hljs"><code>Welcome to TaskManager-Level1!
+                    <pre><code class="hljs">Welcome to TaskManager-Level1!
 Your task? add submit report
 Tasks in the list: 1
 Your task? add return library book
@@ -846,13 +846,8 @@ Bye!
 <div id="flex-div"></div>
 <footer>
   <div class="text-center">
-    <small>This site was built with <a href="https://markbind.github.io/markbind/">MarkBind 1.17.0</a> at Sat, 26 Jan 2019 04:23:19 GMT</small></div>
+    <small>This site was built with <a href="https://markbind.github.io/markbind/">MarkBind 1.17.1</a> at Sun, 03 Feb 2019 07:12:34 GMT</small></div>
 </footer>
-</div>
-<div id="loading-overlay">
-    <div id="spinner-layout">
-        <div id="spinner"></div>
-    </div>
 </div>
 </body>
 <script src="../../../markbind/js/vue.min.js"></script>
@@ -862,7 +857,6 @@ Bye!
 <script src="../../../markbind/js/bootstrap-vue.min.js"></script>
 <script>
     const baseUrl = '/website-base-loader'
-    const enableSearch = true
 </script>
 <script src="../../../markbind/js/setup.js"></script>
 <script src="../../../markbind/layouts/default/scripts.js"></script>

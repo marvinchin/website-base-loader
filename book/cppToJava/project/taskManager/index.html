@@ -18,11 +18,11 @@
     
     <link rel="icon" href="/website-base-loader/favicon.ico">
 </head>
-<body data-spy="scroll" data-target="#page-nav" data-offset="100">
+<body>
 <div id="app">
     <div id="content-wrapper">
   <div>
-    <navbar placement="top" type="inverse">
+    <navbar placement="top" type="inverse" class="temp-navbar">
       <a slot="brand" href="/" title="Home" class="navbar-brand">Software Engineering for Self-Directed Learners</a>
       <li slot="right">
         <searchbar :data="searchData" placeholder="Search" :on-hit="searchCallback" menu-align-right=""></searchbar>
@@ -47,7 +47,7 @@
           <div>
             <p>In this first version of the TaskManager, the task list is not saved to the disk <span class="dimmed">i.e., the task list does not persist between multiple runs of the program</span></p>
             <p>Here is an example output: <span class="fas fa-arrow-down"></span></p>
-            <pre class="hljs"><code>Welcome to TaskManager-Level1!
+            <pre><code class="hljs">Welcome to TaskManager-Level1!
 Your task? add submit report
 Tasks in the list: 1
 Your task? add return library book
@@ -213,7 +213,7 @@ Bye!
                         <li>
                           <p>Store the test input in the text file <code>input.txt</code>.</p>
                           <panel header="%%<span class='fas fa-cube'></span> Example `input.txt`%%" type="seamless">
-                            <pre class="hljs"><code>add Valid Name p/12345 valid@email.butNoPrefix
+                            <pre><code class="hljs">add Valid Name p/12345 valid@email.butNoPrefix
 add Valid Name 12345 e/valid@email.butPhonePrefixMissing
 </code></pre>
                           </panel>
@@ -221,7 +221,7 @@ add Valid Name 12345 e/valid@email.butPhonePrefixMissing
                         <li>
                           <p>Store the output we expect from the SUT in another text file <code>expected.txt</code>.</p>
                           <panel header="%%<span class='fas fa-cube'></span> Example `expected.txt`%%" type="seamless">
-                            <pre class="hljs"><code>Command: || [add Valid Name p/12345 valid@email.butNoPrefix]
+                            <pre><code class="hljs">Command: || [add Valid Name p/12345 valid@email.butNoPrefix]
 Invalid command format: add 
 
 Command: || [add Valid Name 12345 e/valid@email.butPhonePrefixMissing]
@@ -266,7 +266,7 @@ Invalid command format: add
                         <li>
                           <p>Next, we compare <code>output.txt</code> with the <code>expected.txt</code>. This can be done using a utility such as Windows <code>FC</code> (i.e. File Compare) command, Unix <code>diff</code> command, or a GUI tool such as
                             <em>WinMerge</em>.</p>
-                          <pre class="hljs"><code>FC output.txt expected.txt
+                          <pre><code class="hljs">FC output.txt expected.txt
 </code></pre>
                         </li>
                       </ol>
@@ -496,7 +496,7 @@ Invalid command format: add
             <p><strong>Enhance the TaskManager to store tasks in a text file</strong> between runs:</p>
             <ol>
               <li>The text file can follow a format of your choice. For example, each line can represent one task. The attributes can be separated using a suitable delimiter.<br>Here is an example format:
-                <pre class="hljs"><code>T | 1 | read book
+                <pre><code class="hljs">T | 1 | read book
 D | 0 | return book | June 6th
 T | 1 | join sports club
 </code></pre>
@@ -714,13 +714,8 @@ ui.showToUser(taskListDescription);
 <div id="flex-div"></div>
 <footer>
   <div class="text-center">
-    <small>This site was built with <a href="https://markbind.github.io/markbind/">MarkBind 1.17.0</a> at Sat, 26 Jan 2019 04:23:19 GMT</small></div>
+    <small>This site was built with <a href="https://markbind.github.io/markbind/">MarkBind 1.17.1</a> at Sun, 03 Feb 2019 07:12:34 GMT</small></div>
 </footer>
-</div>
-<div id="loading-overlay">
-    <div id="spinner-layout">
-        <div id="spinner"></div>
-    </div>
 </div>
 </body>
 <script src="../../../../markbind/js/vue.min.js"></script>
@@ -730,7 +725,6 @@ ui.showToUser(taskListDescription);
 <script src="../../../../markbind/js/bootstrap-vue.min.js"></script>
 <script>
     const baseUrl = '/website-base-loader'
-    const enableSearch = true
 </script>
 <script src="../../../../markbind/js/setup.js"></script>
 <script src="../../../../markbind/layouts/default/scripts.js"></script>

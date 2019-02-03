@@ -18,7 +18,7 @@
     
     <link rel="icon" href="/website-base-loader/favicon.ico">
 </head>
-<body data-spy="scroll" data-target="#page-nav" data-offset="100">
+<body>
 <div id="app">
     <div id="content-wrapper">
   <h4 id="adding-author-tags-indicate-authorship">Adding <code>@@author</code> tags indicate authorship<a class="fa fa-anchor" href="#adding-author-tags-indicate-authorship"></a></h4>
@@ -26,7 +26,7 @@
     <li>
       <p>Mark your code with a <code>//@@author {yourGithubUsername}</code>. Note the double <code>@</code>.<br> The <code>//@@author</code> tag should indicates the beginning of the code you wrote. The code up to the next <code>//@@author</code> tag or
         the end of the file (whichever comes first) will be considered as was written by that author. Here is a sample code file:</p>
-      <pre class="hljs"><code>//@@author johndoe
+      <pre><code class="hljs">//@@author johndoe
 method 1 ...
 method 2 ...
 //@@author sarahkhoo
@@ -38,7 +38,7 @@ method 4 ...
     <li>
       <p><strong>If you don't know who wrote the code segment below yours</strong>, you may put an empty <code>//@@author</code> (i.e. no GitHub username) to indicate the end of the code segment you wrote. The author of code below yours can add the GitHub
         username to the empty tag later. Here is a sample code with an empty <code>author</code> tag:</p>
-      <pre class="hljs"><code>method 0 ...
+      <pre><code class="hljs">method 0 ...
 //@@author johndoe
 method 1 ...
 method 2 ...
@@ -49,7 +49,7 @@ method 4 ...
     </li>
     <li>
       <p><strong>The author tag syntax varies based on file type</strong> e.g. for java, css, fxml. Use the corresponding comment syntax for non-Java files.<br> Here is an example code from an xml/fxml file.</p>
-      <pre class="hljs"><code>&lt;!-- @@author sereneWong --&gt;
+      <pre><code class="hljs">&lt;!-- @@author sereneWong --&gt;
 &lt;textbox&gt;
   &lt;label&gt;...&lt;/label&gt;
   &lt;input&gt;...&lt;/input&gt;
@@ -60,13 +60,13 @@ method 4 ...
     <li>
       <p><strong>Do not put the <code>//@@author</code> inside java header comments</strong>.<br> 👎
         <span class="fas fa-arrow-down"></span></p>
-      <pre class="hljs"><code>/**
+      <pre><code class="hljs">/**
   * Returns true if ...
   * @@author johndoe
   */
 </code></pre>
       <p>👍<span class="fas fa-arrow-down"></span></p>
-      <pre class="hljs"><code>//@@author johndoe
+      <pre><code class="hljs">//@@author johndoe
 /**
   * Returns true if ...
   */
@@ -100,7 +100,7 @@ method 4 ...
         <li>use <code>//@@author {yourGithubUsername}-unused</code> to mark unused code in those files (note the suffix <code>unused</code>) e.g.
         </li>
       </ul>
-      <pre class="hljs"><code>//@@author johndoe-unused
+      <pre><code class="hljs">//@@author johndoe-unused
 method 1 ...
 method 2 ...
 </code></pre>
@@ -109,7 +109,7 @@ method 2 ...
     <li>
       <p><strong>If you reused code from elsewhere,</strong> mark such code as <code>//@@author {yourGithubUsername}-reused</code> (note the suffix <code>reused</code>) e.g.
       </p>
-      <pre class="hljs"><code>//@@author johndoe-reused
+      <pre><code class="hljs">//@@author johndoe-reused
 method 1 ...
 method 2 ...
 </code></pre>
@@ -128,11 +128,6 @@ method 2 ...
   </ul>
 </div>
 </div>
-<div id="loading-overlay">
-    <div id="spinner-layout">
-        <div id="spinner"></div>
-    </div>
-</div>
 </body>
 <script src="../markbind/js/vue.min.js"></script>
 <script src="../markbind/js/vue-strap.min.js"></script>
@@ -141,7 +136,6 @@ method 2 ...
 <script src="../markbind/js/bootstrap-vue.min.js"></script>
 <script>
     const baseUrl = '/website-base-loader'
-    const enableSearch = true
 </script>
 <script src="../markbind/js/setup.js"></script>
 <script src="../markbind/layouts/default/scripts.js"></script>

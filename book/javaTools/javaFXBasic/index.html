@@ -18,11 +18,11 @@
     
     <link rel="icon" href="/website-base-loader/favicon.ico">
 </head>
-<body data-spy="scroll" data-target="#page-nav" data-offset="100">
+<body>
 <div id="app">
     <div id="content-wrapper">
   <div>
-    <navbar placement="top" type="inverse">
+    <navbar placement="top" type="inverse" class="temp-navbar">
       <a slot="brand" href="/" title="Home" class="navbar-brand">Software Engineering for Self-Directed Learners</a>
       <li slot="right">
         <searchbar :data="searchData" placeholder="Search" :on-hit="searchCallback" menu-align-right=""></searchbar>
@@ -392,7 +392,7 @@
                   <p></p>
                   <h2 id="possible-issues">Possible Issues<a class="fa fa-anchor" href="#possible-issues"></a></h2>
                   <p>If JavaFx fails to load <code>PersonOverview.fxml</code>, you might get the following error message:</p>
-                  <pre class="hljs"><code>javafx.fxml.LoadException:
+                  <pre><code class="hljs">javafx.fxml.LoadException:
 /.../AddressApp/out/production/AddressApp/seedu/address/view/PersonOverview.fxml:15
 </code></pre>
                   <p>To solve this issue, open <code>PersonOverview.fxml</code> normally in IntelliJ and ensure that there is no such attribute around:</p>
@@ -731,7 +731,7 @@
                   </ol>
                   <h2 id="opening-up-the-person-overview-controller-to-java-fx">Opening up the <code>PersonOverviewController</code> to JavaFx<a class="fa fa-anchor" href="#opening-up-the-person-overview-controller-to-java-fx"></a></h2>
                   <p>If you try and run the application now, you will encounter the following error:</p>
-                  <pre class="hljs"><code>javafx.fxml.LoadException: ...
+                  <pre><code class="hljs">javafx.fxml.LoadException: ...
 
 ...
 
@@ -783,13 +783,8 @@ Caused by: java.lang.IllegalAccessException: class javafx.fxml.FXMLLoader$ValueE
 <div id="flex-div"></div>
 <footer>
   <div class="text-center">
-    <small>This site was built with <a href="https://markbind.github.io/markbind/">MarkBind 1.17.0</a> at Sat, 26 Jan 2019 04:23:19 GMT</small></div>
+    <small>This site was built with <a href="https://markbind.github.io/markbind/">MarkBind 1.17.1</a> at Sun, 03 Feb 2019 07:12:34 GMT</small></div>
 </footer>
-</div>
-<div id="loading-overlay">
-    <div id="spinner-layout">
-        <div id="spinner"></div>
-    </div>
 </div>
 </body>
 <script src="../../../markbind/js/vue.min.js"></script>
@@ -799,7 +794,6 @@ Caused by: java.lang.IllegalAccessException: class javafx.fxml.FXMLLoader$ValueE
 <script src="../../../markbind/js/bootstrap-vue.min.js"></script>
 <script>
     const baseUrl = '/website-base-loader'
-    const enableSearch = true
 </script>
 <script src="../../../markbind/js/setup.js"></script>
 <script src="../../../markbind/layouts/default/scripts.js"></script>

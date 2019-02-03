@@ -26,11 +26,11 @@
     <link rel="stylesheet" href="/website-base-loader/css/schedule.css">
     <link rel="icon" href="/website-base-loader/favicon.ico">
 </head>
-<body data-spy="scroll" data-target="#page-nav" data-offset="100">
+<body>
 <div id="app">
     <div id="content-wrapper">
   <div>
-    <navbar placement="top" type="inverse">
+    <navbar placement="top" type="inverse" class="temp-navbar">
       <a slot="brand" href="/website-base-loader/index.html" title="Home" class="navbar-brand">CS2103/T <small>Jan '19</small></a>
       <dropdown text="Schedule" class="nav-link">
         <li><a href="/website-base-loader/schedule/week1/index.html" class="dropdown-item"> <span><strong>Week 1</strong> [Jan 14]  <span class="fas fa-arrow-circle-left"></span></span></a></li>
@@ -1106,7 +1106,7 @@ send()
               <tab header="CLI">
                 <div>
                   <p>Use the <code>reset</code> command to delete commits at the tip of the revision history.</p>
-                  <pre class="hljs"><code>git reset --hard HEAD~2
+                  <pre><code class="hljs">git reset --hard HEAD~2
 </code></pre>
                 </div>
                 <hr>
@@ -6450,13 +6450,8 @@ compact(input);
 <div id="flex-div"></div>
 <footer>
   <div class="text-center">
-    <small>This site was built with <a href="https://markbind.github.io/markbind/">MarkBind 1.17.0</a> at Sat, 26 Jan 2019 04:23:19 GMT</small></div>
+    <small>This site was built with <a href="https://markbind.github.io/markbind/">MarkBind 1.17.1</a> at Sun, 03 Feb 2019 07:12:34 GMT</small></div>
 </footer>
-</div>
-<div id="loading-overlay">
-    <div id="spinner-layout">
-        <div id="spinner"></div>
-    </div>
 </div>
 </body>
 <script src="../../markbind/js/vue.min.js"></script>
@@ -6466,7 +6461,6 @@ compact(input);
 <script src="../../markbind/js/bootstrap-vue.min.js"></script>
 <script>
     const baseUrl = '/website-base-loader'
-    const enableSearch = true
 </script>
 <script src="../../markbind/js/setup.js"></script>
 <script src="../../markbind/layouts/default/scripts.js"></script>

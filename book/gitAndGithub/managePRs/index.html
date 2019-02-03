@@ -18,11 +18,11 @@
     
     <link rel="icon" href="/website-base-loader/favicon.ico">
 </head>
-<body data-spy="scroll" data-target="#page-nav" data-offset="100">
+<body>
 <div id="app">
     <div id="content-wrapper">
   <div>
-    <navbar placement="top" type="inverse">
+    <navbar placement="top" type="inverse" class="temp-navbar">
       <a slot="brand" href="/" title="Home" class="navbar-brand">Software Engineering for Self-Directed Learners</a>
       <li slot="right">
         <searchbar :data="searchData" placeholder="Search" :on-hit="searchCallback" menu-align-right=""></searchbar>
@@ -80,7 +80,7 @@ This repo can be used to practice creating PRs.
                         <hr>
                       </tab>
                       <tab header="CLI">
-                        <pre class="hljs"><code>git push origin add-intro
+                        <pre><code class="hljs">git push origin add-intro
 </code></pre>
                         <hr>
                       </tab>
@@ -147,7 +147,7 @@ This repo can be used to practice creating PRs.
               <p></p>
               <p><strong>4. Sync the local repo with the remote repo.</strong> Because of the merge you did on the GitHub, the <code>master</code> branch of your fork is now ahead of your local repo by one commit. To sync the local repo with the remote repo,
                 pull the <code>master</code> branch to the local repo.</p>
-              <pre class="hljs"><code>git checkout master
+              <pre><code class="hljs">git checkout master
 git pull origin master
 </code></pre>
               <p>Observe how the <code>add-intro</code> branch is now merged to the <code>master</code> branch in your local repo as well.</p>
@@ -170,13 +170,8 @@ git pull origin master
 <div id="flex-div"></div>
 <footer>
   <div class="text-center">
-    <small>This site was built with <a href="https://markbind.github.io/markbind/">MarkBind 1.17.0</a> at Sat, 26 Jan 2019 04:23:19 GMT</small></div>
+    <small>This site was built with <a href="https://markbind.github.io/markbind/">MarkBind 1.17.1</a> at Sun, 03 Feb 2019 07:12:34 GMT</small></div>
 </footer>
-</div>
-<div id="loading-overlay">
-    <div id="spinner-layout">
-        <div id="spinner"></div>
-    </div>
 </div>
 </body>
 <script src="../../../markbind/js/vue.min.js"></script>
@@ -186,7 +181,6 @@ git pull origin master
 <script src="../../../markbind/js/bootstrap-vue.min.js"></script>
 <script>
     const baseUrl = '/website-base-loader'
-    const enableSearch = true
 </script>
 <script src="../../../markbind/js/setup.js"></script>
 <script src="../../../markbind/layouts/default/scripts.js"></script>

@@ -18,11 +18,11 @@
     
     <link rel="icon" href="/website-base-loader/favicon.ico">
 </head>
-<body data-spy="scroll" data-target="#page-nav" data-offset="100">
+<body>
 <div id="app">
     <div id="content-wrapper">
   <div>
-    <navbar placement="top" type="inverse">
+    <navbar placement="top" type="inverse" class="temp-navbar">
       <a slot="brand" href="/" title="Home" class="navbar-brand">Software Engineering for Self-Directed Learners</a>
       <li slot="right">
         <searchbar :data="searchData" placeholder="Search" :on-hit="searchCallback" menu-align-right=""></searchbar>
@@ -143,7 +143,7 @@
 }
 </code></pre>
                   <p><span class="fas fa-arrow-down"></span></p>
-                  <pre class="hljs"><code>Printed in Superclass.
+                  <pre><code class="hljs">Printed in Superclass.
 Printed in Subclass
 </code></pre>
                   <p>Within <code>Subclass</code>, the simple name <code>printMethod()</code> refers to the one declared in <code>Subclass</code>, which overrides the one in <code>Superclass</code>. So, to refer to <code>printMethod()</code> inherited from
@@ -252,7 +252,7 @@ Printed in Subclass
 }
 </code></pre>
                           <p><span class="fas fa-arrow-down"></span></p>
-                          <pre class="hljs"><code>Read a good book
+                          <pre><code class="hljs">Read a good book
 false
 true
 Read textbook
@@ -387,7 +387,7 @@ System.out.println(t1 == t2);
 System.out.println(t1.equals(t2));
 </code></pre>
                 <p><span class="fas fa-arrow-down"></span></p>
-                <pre class="hljs"><code>false
+                <pre><code class="hljs">false
 true
 </code></pre>
                 <p>
@@ -474,7 +474,7 @@ true
 }
 </code></pre>
                         <p><span class="fas fa-arrow-down"></span></p>
-                        <pre class="hljs"><code>description: Read a good book
+                        <pre><code class="hljs">description: Read a good book
 is done? No
 description: Read a good book
 is done? Yes
@@ -555,7 +555,7 @@ do by: Postponed to Nov 18th
 }
 </code></pre>
             <p><span class="fas fa-arrow-down"></span></p>
-            <pre class="hljs"><code>Mittens: Meow
+            <pre><code class="hljs">Mittens: Meow
 Snowball: Meow
 </code></pre>
             <panel type="seamless" header="%%The `Cat` class%%">
@@ -592,7 +592,7 @@ Snowball: Meow
 }
 </code></pre>
             <p><span class="fas fa-arrow-down"></span></p>
-            <pre class="hljs"><code>Mittens: Meow
+            <pre><code class="hljs">Mittens: Meow
 Snowball: Meow
 Spot: Woof
 </code></pre>
@@ -626,7 +626,7 @@ Spot: Woof
 }
 </code></pre>
             <p><span class="fas fa-arrow-down"></span></p>
-            <pre class="hljs"><code>Mittens: Meow
+            <pre><code class="hljs">Mittens: Meow
 Snowball: Meow
 Spot: Woof
 </code></pre>
@@ -700,7 +700,7 @@ Spot: Woof
 }
 </code></pre>
                       <p><span class="fas fa-arrow-down"></span></p>
-                      <pre class="hljs"><code>78
+                      <pre><code class="hljs">78
 12
 314
 78
@@ -835,7 +835,7 @@ Spot: Woof
                                     <li>
                                       <p>Store the test input in the text file <code>input.txt</code>.</p>
                                       <panel header="%%<span class='fas fa-cube'></span> Example `input.txt`%%" type="seamless">
-                                        <pre class="hljs"><code>add Valid Name p/12345 valid@email.butNoPrefix
+                                        <pre><code class="hljs">add Valid Name p/12345 valid@email.butNoPrefix
 add Valid Name 12345 e/valid@email.butPhonePrefixMissing
 </code></pre>
                                       </panel>
@@ -843,7 +843,7 @@ add Valid Name 12345 e/valid@email.butPhonePrefixMissing
                                     <li>
                                       <p>Store the output we expect from the SUT in another text file <code>expected.txt</code>.</p>
                                       <panel header="%%<span class='fas fa-cube'></span> Example `expected.txt`%%" type="seamless">
-                                        <pre class="hljs"><code>Command: || [add Valid Name p/12345 valid@email.butNoPrefix]
+                                        <pre><code class="hljs">Command: || [add Valid Name p/12345 valid@email.butNoPrefix]
 Invalid command format: add 
 
 Command: || [add Valid Name 12345 e/valid@email.butPhonePrefixMissing]
@@ -886,7 +886,7 @@ Invalid command format: add
                                     <li>
                                       <p>Next, we compare <code>output.txt</code> with the <code>expected.txt</code>. This can be done using a utility such as Windows <code>FC</code> (i.e. File Compare) command, Unix <code>diff</code> command, or a GUI tool
                                         such as <em>WinMerge</em>.</p>
-                                      <pre class="hljs"><code>FC output.txt expected.txt
+                                      <pre><code class="hljs">FC output.txt expected.txt
 </code></pre>
                                     </li>
                                   </ol>
@@ -1087,7 +1087,7 @@ Invalid command format: add
 }
 </code></pre>
                     <p><span class="fas fa-arrow-down"></span></p>
-                    <pre class="hljs"><code>Circle of area 78
+                    <pre><code class="hljs">Circle of area 78
 Rectangle of area 12
 Circle of area 314
 Rectangle of area 16
@@ -1317,7 +1317,7 @@ Rectangle of area 16
 }
 </code></pre>
                   <p><span class="fas fa-arrow-down"></span></p>
-                  <pre class="hljs"><code>Circle of area 78
+                  <pre><code class="hljs">Circle of area 78
 Rectangle of area 12
 Person of name James Cook
 </code></pre>
@@ -1398,13 +1398,8 @@ Person of name James Cook
 <div id="flex-div"></div>
 <footer>
   <div class="text-center">
-    <small>This site was built with <a href="https://markbind.github.io/markbind/">MarkBind 1.17.0</a> at Sat, 26 Jan 2019 04:23:19 GMT</small></div>
+    <small>This site was built with <a href="https://markbind.github.io/markbind/">MarkBind 1.17.1</a> at Sun, 03 Feb 2019 07:12:34 GMT</small></div>
 </footer>
-</div>
-<div id="loading-overlay">
-    <div id="spinner-layout">
-        <div id="spinner"></div>
-    </div>
 </div>
 </body>
 <script src="../../../markbind/js/vue.min.js"></script>
@@ -1414,7 +1409,6 @@ Person of name James Cook
 <script src="../../../markbind/js/bootstrap-vue.min.js"></script>
 <script>
     const baseUrl = '/website-base-loader'
-    const enableSearch = true
 </script>
 <script src="../../../markbind/js/setup.js"></script>
 <script src="../../../markbind/layouts/default/scripts.js"></script>

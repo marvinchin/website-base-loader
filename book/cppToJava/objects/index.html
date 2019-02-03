@@ -18,11 +18,11 @@
     
     <link rel="icon" href="/website-base-loader/favicon.ico">
 </head>
-<body data-spy="scroll" data-target="#page-nav" data-offset="100">
+<body>
 <div id="app">
     <div id="content-wrapper">
   <div>
-    <navbar placement="top" type="inverse">
+    <navbar placement="top" type="inverse" class="temp-navbar">
       <a slot="brand" href="/" title="Home" class="navbar-brand">Software Engineering for Self-Directed Learners</a>
       <li slot="right">
         <searchbar :data="searchData" placeholder="Search" :on-hit="searchCallback" menu-align-right=""></searchbar>
@@ -135,7 +135,7 @@
 }
 </code></pre>
                           <p><span class="fas fa-arrow-down"></span></p>
-                          <pre class="hljs"><code>java.awt.Rectangle[x=0,y=0,width=5,height=10]
+                          <pre><code class="hljs">java.awt.Rectangle[x=0,y=0,width=5,height=10]
 </code></pre>
                           <div slot="hint">
                             <ul>
@@ -178,7 +178,7 @@
 System.out.println(spot.x + <span class="hljs-string">", "</span> + spot.y + <span class="hljs-string">", "</span> + sum);
 </code></pre>
               <p><span class="fas fa-arrow-down"></span></p>
-              <pre class="hljs"><code>3, 4, 25
+              <pre><code class="hljs">3, 4, 25
 </code></pre>
             </box>
             <p><strong>You can <tooltip content="i.e., change/modify"><em>mutate</em></tooltip> an object by assigning a different values to its attributes.</strong></p>
@@ -189,7 +189,7 @@ spot.x = <span class="hljs-number">5</span>;
 System.out.println(spot.x + <span class="hljs-string">", "</span> + spot.y);
 </code></pre>
               <p><span class="fas fa-arrow-down"></span></p>
-              <pre class="hljs"><code>5, 4
+              <pre><code class="hljs">5, 4
 </code></pre>
             </box>
             <p><span style="opacity: 0.5"> <span class="badge badge-pill badge-danger"><span class="fas fa-not-equal"></span></span>
@@ -202,7 +202,7 @@ spot.translate(<span class="hljs-number">5</span>,<span class="hljs-number">5</s
 System.out.println(spot.x + <span class="hljs-string">", "</span> + spot.y);
 </code></pre>
               <p><span class="fas fa-arrow-down"></span></p>
-              <pre class="hljs"><code>3, 4
+              <pre><code class="hljs">3, 4
 8, 9
 </code></pre>
             </box>
@@ -237,7 +237,7 @@ System.out.println(spot.x + <span class="hljs-string">", "</span> + spot.y);
 }
 </code></pre>
                         <p><span class="fas fa-arrow-down"></span></p>
-                        <pre class="hljs"><code>java.awt.Rectangle[x=0,y=0,width=4,height=6]
+                        <pre><code class="hljs">java.awt.Rectangle[x=0,y=0,width=4,height=6]
 Area: 24
 java.awt.Rectangle[x=0,y=0,width=8,height=10]
 </code></pre>
@@ -285,7 +285,7 @@ java.awt.Rectangle[x=0,y=0,width=8,height=10]
 }
 </code></pre>
             <p><span class="fas fa-arrow-down"></span></p>
-            <pre class="hljs"><code>3, 4
+            <pre><code class="hljs">3, 4
 </code></pre>
           </box>
           <p><strong>You can return an object from a method too.</strong></p>
@@ -330,7 +330,7 @@ spot.translate(<span class="hljs-number">50</span>, <span class="hljs-number">50
 System.out.println(result);
 </code></pre>
               <p><span class="fas fa-arrow-down"></span></p>
-              <pre class="hljs"><code>null
+              <pre><code class="hljs">null
 </code></pre>
             </box>
           </div>
@@ -348,7 +348,7 @@ System.out.println(<span class="hljs-string">"p1: "</span> + p1.x + <span class=
 System.out.println(<span class="hljs-string">"p2: "</span> + p2.x + <span class="hljs-string">", "</span> + p2.y);
 </code></pre>
             <p><span class="fas fa-arrow-down"></span></p>
-            <pre class="hljs"><code>p1: 0, 0
+            <pre><code class="hljs">p1: 0, 0
 p2: 0, 0
 p1: 1, 2
 p2: 1, 2
@@ -371,7 +371,7 @@ p2: 1, 2
     System.out.println(<span class="hljs-string">"p3: "</span> + p3.x + <span class="hljs-string">", "</span> + p3.y);
 }
 </code></pre>
-            <pre class="hljs"><code>p3: 2, 3
+            <pre><code class="hljs">p3: 2, 3
 p3: 3, 2
 </code></pre>
           </box>
@@ -412,7 +412,7 @@ p3: 3, 2
 }
 </code></pre>
                       <p><span class="fas fa-arrow-down"></span></p>
-                      <pre class="hljs"><code>arguments: java.awt.Point[x=0,y=0], java.awt.Rectangle[x=2,y=3,width=5,height=6]
+                      <pre><code class="hljs">arguments: java.awt.Point[x=0,y=0], java.awt.Rectangle[x=2,y=3,width=5,height=6]
 argument point after method call: java.awt.Point[x=0,y=0]
 argument rectangle after method call: java.awt.Rectangle[x=0,y=0,width=5,height=6]
 returned point: java.awt.Point[x=2,y=3]
@@ -479,13 +479,8 @@ spot = <span class="hljs-keyword">null</span>;
 <div id="flex-div"></div>
 <footer>
   <div class="text-center">
-    <small>This site was built with <a href="https://markbind.github.io/markbind/">MarkBind 1.17.0</a> at Sat, 26 Jan 2019 04:23:19 GMT</small></div>
+    <small>This site was built with <a href="https://markbind.github.io/markbind/">MarkBind 1.17.1</a> at Sun, 03 Feb 2019 07:12:34 GMT</small></div>
 </footer>
-</div>
-<div id="loading-overlay">
-    <div id="spinner-layout">
-        <div id="spinner"></div>
-    </div>
 </div>
 </body>
 <script src="../../../markbind/js/vue.min.js"></script>
@@ -495,7 +490,6 @@ spot = <span class="hljs-keyword">null</span>;
 <script src="../../../markbind/js/bootstrap-vue.min.js"></script>
 <script>
     const baseUrl = '/website-base-loader'
-    const enableSearch = true
 </script>
 <script src="../../../markbind/js/setup.js"></script>
 <script src="../../../markbind/layouts/default/scripts.js"></script>

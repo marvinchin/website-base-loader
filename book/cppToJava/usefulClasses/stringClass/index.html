@@ -18,11 +18,11 @@
     
     <link rel="icon" href="/website-base-loader/favicon.ico">
 </head>
-<body data-spy="scroll" data-target="#page-nav" data-offset="100">
+<body>
 <div id="app">
     <div id="content-wrapper">
   <div>
-    <navbar placement="top" type="inverse">
+    <navbar placement="top" type="inverse" class="temp-navbar">
       <a slot="brand" href="/" title="Home" class="navbar-brand">Software Engineering for Self-Directed Learners</a>
       <li slot="right">
         <searchbar :data="searchData" placeholder="Search" :on-hit="searchCallback" menu-align-right=""></searchbar>
@@ -80,7 +80,7 @@ System.out.println(name);
 System.out.println(upperName);
 </code></pre>
                   <p><span class="fas fa-arrow-down"></span></p>
-                  <pre class="hljs"><code>Alan Turing
+                  <pre><code class="hljs">Alan Turing
 ALAN TURING
 </code></pre>
                 </box>
@@ -102,7 +102,7 @@ text = text.replace(<span class="hljs-string">"Computer Science"</span>, <span c
 System.out.println(text);
 </code></pre>
                   <p><span class="fas fa-arrow-down"></span></p>
-                  <pre class="hljs"><code>CS is fun!
+                  <pre><code class="hljs">CS is fun!
 </code></pre>
                 </box>
               </div>
@@ -234,7 +234,7 @@ System.out.println(s1.equalsIgnoreCase(s2)); <span class="hljs-comment">//true</
                   <pre><code class="hljs java">System.out.println(<span class="hljs-string">"First line\nSecond \"line\""</span>);
 </code></pre>
                   <p><span class="fas fa-arrow-down"></span></p>
-                  <pre class="hljs"><code>First line
+                  <pre><code class="hljs">First line
 Second &quot;line&quot;
 </code></pre>
                 </box>
@@ -244,7 +244,7 @@ Second &quot;line&quot;
                   <pre><code class="hljs java">System.out.println(<span class="hljs-string">"First line"</span> + System.lineSeparator() + <span class="hljs-string">"Second line"</span>);
 </code></pre>
                   <p><span class="fas fa-arrow-down"></span></p>
-                  <pre class="hljs"><code>First line
+                  <pre><code class="hljs">First line
 Second line
 </code></pre>
                 </box>
@@ -312,7 +312,7 @@ Second line
 }
 </code></pre>
                           <p><span class="fas fa-arrow-down"></span></p>
-                          <pre class="hljs"><code>SANDWICH: 4.50
+                          <pre><code class="hljs">SANDWICH: 4.50
 SODA: 10.00
 FRIES: 0.50
 </code></pre>
@@ -343,13 +343,8 @@ FRIES: 0.50
 <div id="flex-div"></div>
 <footer>
   <div class="text-center">
-    <small>This site was built with <a href="https://markbind.github.io/markbind/">MarkBind 1.17.0</a> at Sat, 26 Jan 2019 04:23:19 GMT</small></div>
+    <small>This site was built with <a href="https://markbind.github.io/markbind/">MarkBind 1.17.1</a> at Sun, 03 Feb 2019 07:12:34 GMT</small></div>
 </footer>
-</div>
-<div id="loading-overlay">
-    <div id="spinner-layout">
-        <div id="spinner"></div>
-    </div>
 </div>
 </body>
 <script src="../../../../markbind/js/vue.min.js"></script>
@@ -359,7 +354,6 @@ FRIES: 0.50
 <script src="../../../../markbind/js/bootstrap-vue.min.js"></script>
 <script>
     const baseUrl = '/website-base-loader'
-    const enableSearch = true
 </script>
 <script src="../../../../markbind/js/setup.js"></script>
 <script src="../../../../markbind/layouts/default/scripts.js"></script>

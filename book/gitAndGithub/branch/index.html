@@ -18,11 +18,11 @@
     
     <link rel="icon" href="/website-base-loader/favicon.ico">
 </head>
-<body data-spy="scroll" data-target="#page-nav" data-offset="100">
+<body>
 <div id="app">
     <div id="content-wrapper">
   <div>
-    <navbar placement="top" type="inverse">
+    <navbar placement="top" type="inverse" class="temp-navbar">
       <a slot="brand" href="/" title="Home" class="navbar-brand">Software Engineering for Self-Directed Learners</a>
       <li slot="right">
         <searchbar :data="searchData" placeholder="Search" :on-hit="searchCallback" menu-align-right=""></searchbar>
@@ -67,10 +67,10 @@
                 </tab>
                 <tab header="CLI">
                   <div>
-                    <pre class="hljs"><code>git status
+                    <pre><code class="hljs">git status
 </code></pre>
                     <p><span class="fas fa-arrow-down"></span></p>
-                    <pre class="hljs"><code>on branch master
+                    <pre><code class="hljs">on branch master
 </code></pre>
                   </div>
                   <hr>
@@ -92,11 +92,11 @@
                 <tab header="CLI">
                   <div>
                     <p>You can use the <code>branch</code> command to create a new branch and the <code>checkout</code> command to switch to a specific branch.</p>
-                    <pre class="hljs"><code>git branch feature1
+                    <pre><code class="hljs">git branch feature1
 git checkout feature1
 </code></pre>
                     <p>One-step shortcut to create a branch and switch to it at the same time:</p>
-                    <pre class="hljs"><code>git checkout –b feature1
+                    <pre><code class="hljs">git checkout –b feature1
 </code></pre>
                   </div>
                   <hr>
@@ -115,7 +115,7 @@ git checkout feature1
                 </tab>
                 <tab header="CLI">
                   <div>
-                    <pre class="hljs"><code>git checkout master
+                    <pre><code class="hljs">git checkout master
 </code></pre>
                   </div>
                   <hr>
@@ -137,7 +137,7 @@ git checkout feature1
                 </tab>
                 <tab header="CLI">
                   <div>
-                    <pre class="hljs"><code>git merge master
+                    <pre><code class="hljs">git merge master
 </code></pre>
                   </div>
                   <hr>
@@ -155,7 +155,7 @@ git checkout feature1
                   <hr>
                 </tab>
                 <tab header="CLI">
-                  <pre class="hljs"><code>git merge feature1
+                  <pre><code class="hljs">git merge feature1
 </code></pre>
                   <hr>
                 </tab>
@@ -185,7 +185,7 @@ git checkout feature1
                 <tab header="CLI">
                   <div>
                     <p>Use the <code>--no-ff</code> switch (short for <em>no fast forward</em>):</p>
-                    <pre class="hljs"><code>git merge --no-ff add-countries
+                    <pre><code class="hljs">git merge --no-ff add-countries
 </code></pre>
                   </div>
                   <hr>
@@ -202,13 +202,8 @@ git checkout feature1
 <div id="flex-div"></div>
 <footer>
   <div class="text-center">
-    <small>This site was built with <a href="https://markbind.github.io/markbind/">MarkBind 1.17.0</a> at Sat, 26 Jan 2019 04:23:19 GMT</small></div>
+    <small>This site was built with <a href="https://markbind.github.io/markbind/">MarkBind 1.17.1</a> at Sun, 03 Feb 2019 07:12:34 GMT</small></div>
 </footer>
-</div>
-<div id="loading-overlay">
-    <div id="spinner-layout">
-        <div id="spinner"></div>
-    </div>
 </div>
 </body>
 <script src="../../../markbind/js/vue.min.js"></script>
@@ -218,7 +213,6 @@ git checkout feature1
 <script src="../../../markbind/js/bootstrap-vue.min.js"></script>
 <script>
     const baseUrl = '/website-base-loader'
-    const enableSearch = true
 </script>
 <script src="../../../markbind/js/setup.js"></script>
 <script src="../../../markbind/layouts/default/scripts.js"></script>
